@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webcam Feed</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Webcam Feed</h1>
+    <p>Currently detecting: {{ language|upper }} Sign Language</p>
+    <div class="video-container">
+      <img src="{{ url_for('video_feed', language=language) }}" alt="Webcam Feed">
+    </div>
+    <a href="{{ url_for('home') }}" class="btn">Back to Home</a>
+  </div>
+</body>
+</html>
